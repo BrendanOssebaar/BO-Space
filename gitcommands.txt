@@ -1,0 +1,13 @@
+dir                                           = laat alle mappen zien
+cd (map naam)                                 = gaat naar de aangegeven map
+
+git status                                    = laat zien of er een repository is en of er aanpasing aan bestanden zijn gemaakt
+git add .                                     = voegt de file toe aan de stageing area zo dat je commits kan maken
+git commit -m "de inhoud van wat je naar github stuurt" = voeg een commit toe aan een file wat je naar github wil stuuren zo dat je verandringen kan zien
+git clone                                     = clone de online github naar je lokale files
+git push                                      = na git push -u origin main deze gebruiken
+ 
+
+
+
+

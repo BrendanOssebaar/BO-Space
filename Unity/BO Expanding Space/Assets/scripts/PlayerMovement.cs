@@ -30,10 +30,13 @@ public class PlayerMovement : MonoBehaviour
         {
             transform.position += new Vector3(movementSpeed, 0) * Time.deltaTime;  
         }
-        if (Input.GetKey(KeyCode.W)&& onGround==true)
-        {
-            player.AddForce(new Vector2(0, jumpHeight)* Time.deltaTime, ForceMode2D.Impulse);
-        }  
+            if ((onGround == true) && (Input.GetKeyDown(KeyCode.W)))
+            {
+                Vector2 jump = new Vector2(0, jumpHeight);
+                
+                player.AddForce(jump, ForceMode2D.Impulse);
+                onGround = false;
+            }
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {

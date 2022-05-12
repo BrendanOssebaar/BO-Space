@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    private int minFuel = 0;
+    
     private int maxFuel = 600;
     public int currentFuel;
     public Fuelbar fuelbar;

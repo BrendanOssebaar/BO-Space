@@ -10,6 +10,7 @@ public class PlayerMovement : MonoBehaviour
     bool onGround;
     private Vector2 validDirection = Vector2.right;
     private Vector2 validDirectionS = Vector2.left;
+    private Vector2 validDirectionB = Vector2.down;
     private float contactThreshold = 30;
 
 
@@ -48,9 +49,18 @@ public class PlayerMovement : MonoBehaviour
                     break;
                 }
             }
+
             for (int k = 0; k < collision.contacts.Length; k++)
             {
                 if (Vector2.Angle(collision.contacts[k].normal, validDirectionS) <= contactThreshold)
+                {
+                    onGround = false;
+                    break;
+                }
+            }
+            for (int k = 0; k < collision.contacts.Length; k++)
+            {
+                if (Vector2.Angle(collision.contacts[k].normal, validDirectionB) <= contactThreshold)
                 {
                     onGround = false;
                     break;

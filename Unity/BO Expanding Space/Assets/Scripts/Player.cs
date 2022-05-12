@@ -5,7 +5,7 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     
-    private int maxFuel = 600;
+    public int maxFuel;
     public int currentFuel;
     public Fuelbar fuelbar;
 
@@ -23,6 +23,19 @@ public class Player : MonoBehaviour
         {
             AddFuel(10);
         }
+        if (Input.GetKeyDown(KeyCode.Alpha1))
+        {
+            maxFuel = 300;
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha2))
+        {
+            maxFuel = 800;
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha3))
+        {
+            maxFuel = 1300;
+        }
+
     }
 
     void AddFuel(int addedfuel)

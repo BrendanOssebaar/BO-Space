@@ -4,11 +4,27 @@ using UnityEngine;
 
 public class Pickup : MonoBehaviour
 {
-    internal void OnTriggerEnter(Collider other)
+    public Transform detectionPoint;
+    private const float detectionRadius = 0.2f;
+    public LayerMask detectionLayer;
+
+    void Update()
     {
-        if(Input.GetKeyDown(KeyCode.E))
+        if(DetectObject())
+        {
+            if(InteractionInput())
             {
-            Destroy(other.gameObject);
+                Debug.Log("Pick Up");
             }
+        }
+    }
+    internal bool InteractionInput()
+    {
+        return Input.GetKeyDown(KeyCode.E);
+    }
+    bool DetectObject()
+    {
+        return Physics2D.OverlapCircle(detectionPoint.position,detectionRadius,detectionLayer);
+        
     }
 }

@@ -16,13 +16,7 @@ public class Player : MonoBehaviour
         fuelbar.setMaxFuel(maxFuel);
         currentFuel = 0;
     }
-    internal void OnTriggerEnter(Collider fuelWood)
-    {
-        if (Input.GetKeyDown(KeyCode.E))
-        {
-            Destroy(fuelWood.gameObject);
-        }
-    }
+    
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Space))

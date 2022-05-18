@@ -5,7 +5,7 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     
-    private int maxFuel = 600;
+    private int maxFuel = 200;
     public int currentFuel;
     public Fuelbar fuelbar;
 
@@ -25,7 +25,7 @@ public class Player : MonoBehaviour
         }
     }
 
-    void AddFuel(int addedfuel)
+    public void AddFuel(int addedfuel)
     {
         currentFuel += addedfuel;
         fuelbar.setFuel(currentFuel);

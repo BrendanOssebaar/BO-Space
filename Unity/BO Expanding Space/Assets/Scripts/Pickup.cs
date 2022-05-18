@@ -7,15 +7,15 @@ public class Pickup : MonoBehaviour
     public Transform detectionPoint;
     private const float detectionRadius = 0.2f;
     public LayerMask detectionLayer;
-
+    public GameObject detectedObject;
+    public List<GameObject> pickedItems = new List<GameObject>();
     void Update()
     {
         if(DetectObject())
         {
             if(InteractionInput())
             {
-                Debug.Log("Pick Up");
-                Debug.Log("Destroy");
+                detectedObject.GetComponent<Items>().Interact();
             }
         }
     }
@@ -25,7 +25,20 @@ public class Pickup : MonoBehaviour
     }
     bool DetectObject()
     {
-        return Physics2D.OverlapCircle(detectionPoint.position,detectionRadius,detectionLayer);
-        
+        Collider2D obj = Physics2D.OverlapCircle(detectionPoint.position,detectionRadius,detectionLayer);
+        if (obj == null)
+        {
+            detectedObject = null;
+            return false;
+        }
+        else
+        {
+            detectedObject = obj.gameObject;
+            return true;
+        }
+    }
+    public void PickUpItem(GameObject item)
+    {
+        pickedItems.Add(item);
     }
 }

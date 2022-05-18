@@ -5,15 +5,29 @@ using UnityEngine;
 public class CamFollow : MonoBehaviour
 {
     public GameObject player;
-    // Start is called before the first frame update
+    float posx;
+    float posy;
+    public GameObject cam;
+    
     void Start()
     {
         
     }
 
-    // Update is called once per frame
+    
     void Update()
     {
-        transform.position = new Vector3(player.transform.position.x,player.transform.position.y,-10);
+        posx = player.transform.position.x;
+        posy = player.transform.position.y;
+
+        if (posy == 0)
+        {
+            posy = 0; 
+        }
+
+        else {
+            transform.position = new Vector3(posx,posy,-10);
+        }
+        
     }
 }

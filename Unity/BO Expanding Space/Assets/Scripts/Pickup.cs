@@ -15,6 +15,7 @@ public class Pickup : MonoBehaviour
             if(InteractionInput())
             {
                 Debug.Log("Pick Up");
+                Debug.Log("Destroy");
             }
         }
     }

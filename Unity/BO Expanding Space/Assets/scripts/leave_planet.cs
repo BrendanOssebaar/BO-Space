@@ -5,11 +5,10 @@ using UnityEngine.UI;
 
 public class leave_planet : MonoBehaviour
 {
-    public Slider fuelbar;
     public int fuel;
     public int tank_full;
     public bool full = false;
-    public int i;
+    
     void Start()
     {
         
@@ -19,11 +18,11 @@ public class leave_planet : MonoBehaviour
     void Update()
     {
 
-        fuel = GameObject.Find("ThePlayer").GetComponent<Player>().currentFuel;
-        tank_full = GameObject.Find("ThePlayer").GetComponent<Player>().maxFuel;
+        fuel = GameObject.Find("player").GetComponent<Player>().currentFuel;
+        tank_full = GameObject.Find("player").GetComponent<Player>().maxFuel;
 
 
-        if (tank_full == fuel || tank_full > fuel)
+        if (tank_full == fuel || tank_full < fuel)
         {
             full = true;
         }

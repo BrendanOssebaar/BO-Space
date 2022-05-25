@@ -5,13 +5,32 @@ using UnityEngine.SceneManagement;
 
 public class PlanetStats : MonoBehaviour
 {
+    public enum planetType {Desert, Ruined, Lush }
+    public planetType PlanetType;
     float currentTime;
     float startingTime = 10f;
-    private int maxFuel = 2000;
+    private int maxFuel;
     public int currentFuel;
     public Fuelbar fuelbar;
-    // Start is called before the first frame update
-    void Start()
+    public void planets()
+    {
+        switch(PlanetType)
+        {
+            case planetType.Desert:
+                Debug.Log("Desert");
+                maxFuel = 500;
+                break;
+            case planetType.Ruined:
+                Debug.Log("Ruined");
+                maxFuel = 1500;
+                break;
+            case planetType.Lush:
+                Debug.Log("Lush");
+                maxFuel = 3000;
+                break;
+        }
+    }
+        void Start()
     {
         currentTime = startingTime;
         fuelbar.setMaxFuel(maxFuel);

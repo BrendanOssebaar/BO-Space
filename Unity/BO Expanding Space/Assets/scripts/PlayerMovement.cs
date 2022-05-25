@@ -5,18 +5,14 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     public float movementSpeed = 10;
-    public Rigidbody2D player;
-    public float jumpHeight = 20;
-    bool onGround;
-    private Vector2 validDirection = Vector2.right;
-    private Vector2 validDirectionS = Vector2.left;
-    private Vector2 validDirectionB = Vector2.down;
-    private float contactThreshold = 30;
-
+    private Rigidbody2D player;
+    public float jumpHeight = 27;
+    private bool onGround;
 
     void Start()
     {
-        
+        player = GetComponent<Rigidbody2D>();
+
     }
 
    
@@ -42,34 +38,7 @@ public class PlayerMovement : MonoBehaviour
     {
         onGround = true;
 
-        if (collision.gameObject.name == "Platform")
-        {
-            for (int k = 0; k < collision.contacts.Length; k++)
-            {
-                if (Vector2.Angle(collision.contacts[k].normal, validDirection) <= contactThreshold)
-                {
-                    onGround = false;
-                    break;
-                }
-            }
-
-            for (int k = 0; k < collision.contacts.Length; k++)
-            {
-                if (Vector2.Angle(collision.contacts[k].normal, validDirectionS) <= contactThreshold)
-                {
-                    onGround = false;
-                    break;
-                }
-            }
-            for (int k = 0; k < collision.contacts.Length; k++)
-            {
-                if (Vector2.Angle(collision.contacts[k].normal, validDirectionB) <= contactThreshold)
-                {
-                    onGround = false;
-                    break;
-                }
-            }
-        }
+        
     }
 
 

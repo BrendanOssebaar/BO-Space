@@ -18,6 +18,7 @@ public class Pickup : MonoBehaviour
                 detectedObject.GetComponent<Items>().Interact();
             }
         }
+       
     }
     internal bool InteractionInput()
     {

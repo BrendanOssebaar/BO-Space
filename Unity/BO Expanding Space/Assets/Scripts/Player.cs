@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 public class Player : MonoBehaviour
 {
     float currentTime;
-    float startingTime = 10f;
+    float startingTime = 1000f;
     public int maxFuel = 2000;
     public int currentFuel;
     public Fuelbar fuelbar;

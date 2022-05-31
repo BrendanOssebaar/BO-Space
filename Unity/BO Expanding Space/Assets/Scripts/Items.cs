@@ -4,7 +4,7 @@ using UnityEngine;
 [RequireComponent(typeof(PolygonCollider2D))]
 public class Items : MonoBehaviour
 {
-    public enum InteractionType { WoodFuel,LeafFuel,StickFuel,CoalFuel,RoditeFuel}
+    public enum InteractionType { WoodFuel,LeafFuel,StickFuel,CoalFuel,RoditeFuel,Leave}
     public InteractionType type;
 
     private void Reset()
@@ -47,6 +47,12 @@ public class Items : MonoBehaviour
                 FindObjectOfType<Pickup>().PickUpItem(gameObject);
                 FindObjectOfType<Player>().AddFuel(250);
                 Destroy(gameObject);
+                break;
+            case InteractionType.Leave:
+                Debug.Log("Leave");
+                FindObjectOfType<Pickup>().PickUpItem(gameObject);
+                leave_planet link = gameObject.GetComponent<leave_planet>();
+                link.leave();
                 break;
             default:
                 Debug.Log("NULL");

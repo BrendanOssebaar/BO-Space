@@ -3,12 +3,17 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using System.ComponentModel;
 
 public class leave_planet : MonoBehaviour
 {
-    public int fuel;
-    public int tank_full;
-    public bool full = false;
+    [SerializeField]
+    private int fuel;
+    [SerializeField]
+    private int tank_full;
+    [SerializeField]
+    private bool full = false;
+    
 
     void Update()
     {

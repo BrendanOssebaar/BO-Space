@@ -3,7 +3,12 @@ guid: b5478c5010a6d7244a18e189ddc9bbd3
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - Coal: {fileID: 7298725854356355703, guid: 22f400958c920c94bb9a3522f056afb9, type: 3}
+  - Leaf: {fileID: 8969814548509323411, guid: bc21c297239fd6f4696248f005a4edb8, type: 3}
+  - rodite: {fileID: 2928715378080781675, guid: d8333e8f5220b3645a67690c47342384, type: 3}
+  - stick: {fileID: 6855868267463725216, guid: 62c8bc7f1cd531a458a16da64ce070ca, type: 3}
+  - wood: {fileID: 2922535817566105619, guid: b0902a179d4054d41b72623f52b5101d, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

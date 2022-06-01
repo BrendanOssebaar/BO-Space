@@ -4,8 +4,20 @@ using UnityEngine;
 [RequireComponent(typeof(PolygonCollider2D))]
 public class Items : MonoBehaviour
 {
-    public enum InteractionType { WoodFuel,LeafFuel,StickFuel,CoalFuel,RoditeFuel,Leave}
-    public InteractionType type;
+    [SerializeField]
+    private enum InteractionType { WoodFuel,LeafFuel,StickFuel,CoalFuel,RoditeFuel,Leave,Coalpile,Tree}
+    [SerializeField]
+    private InteractionType type;
+    [SerializeField]
+    private GameObject Coal;
+    [SerializeField]
+    private GameObject Leaf;
+    [SerializeField]
+    private GameObject rodite;
+    [SerializeField]
+    private GameObject stick;
+    [SerializeField]
+    private GameObject wood;
 
     private void Reset()
     {
@@ -50,9 +62,16 @@ public class Items : MonoBehaviour
                 break;
             case InteractionType.Leave:
                 Debug.Log("Leave");
-                FindObjectOfType<Pickup>().PickUpItem(gameObject);
                 leave_planet link = gameObject.GetComponent<leave_planet>();
                 link.leave();
+                break;
+            case InteractionType.Coalpile:
+                Debug.Log("Coalpile_interaction");
+                Instantiate(Coal, new Vector3(1, 1, 1), Quaternion.identity);
+                break;
+            case InteractionType.Tree:
+                Debug.Log("Trees_interaction");
+                Instantiate(wood, new Vector3(1, 1, 1), Quaternion.identity);
                 break;
             default:
                 Debug.Log("NULL");

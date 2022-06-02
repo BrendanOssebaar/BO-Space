@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5889458491313929309}
   - component: {fileID: 8724040230101779465}
   - component: {fileID: 5088865714251584497}
-  - component: {fileID: 3684793939022477391}
+  - component: {fileID: 5292285319555770459}
   m_Layer: 6
   m_Name: Coal
   m_TagString: Untagged
@@ -94,15 +94,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b5478c5010a6d7244a18e189ddc9bbd3, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
+  m_Name: 
+  m_EditorClassIdentifier: 
   type: 3
   Coal: {fileID: 0}
   Leaf: {fileID: 0}
   rodite: {fileID: 0}
   stick: {fileID: 0}
   wood: {fileID: 0}
---- !u!60 &3684793939022477391
+--- !u!60 &5292285319555770459
 PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -119,7 +119,7 @@ PolygonCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 16, y: 9}
+    oldSize: {x: 3.2, y: 1.8}
     newSize: {x: 16, y: 9}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -127,32 +127,12 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 1.0799999, y: -0.81}
-      - {x: 1.22, y: -0.51}
-      - {x: 1.22, y: -0.25}
-      - {x: 1.1999999, y: -0.22999999}
-      - {x: 1.18, y: -0.14}
-      - {x: 1.14, y: -0.08}
-      - {x: 0.96, y: 0.07}
-      - {x: 0.88, y: 0.11}
-      - {x: 0.83, y: 0.16}
-      - {x: 0.75, y: 0.22}
-      - {x: 0.14999999, y: 0.22}
-      - {x: 0.13, y: 0.19999999}
-      - {x: 0.04, y: 0.17999999}
-      - {x: 0.02, y: 0.13}
-      - {x: -0.06, y: 0.13}
-      - {x: -0.11, y: 0.08}
-      - {x: -0.17, y: -0.049999997}
-      - {x: -0.22, y: -0.29999998}
-      - {x: -0.26999998, y: -0.45}
-      - {x: -0.26999998, y: -0.84999996}
-      - {x: -0.21, y: -0.97999996}
-      - {x: 0.08, y: -1.06}
-      - {x: 0.17, y: -1.12}
-      - {x: 0.24, y: -1.17}
-      - {x: 0.35, y: -1.22}
-      - {x: 0.79999995, y: -1.22}
-      - {x: 0.87, y: -1.1899999}
-      - {x: 0.97999996, y: -1.06}
-      - {x: 1.02, y: -0.95}
+    - - {x: -0.12, y: 0.19}
+      - {x: -0.14, y: 0.17999999}
+      - {x: -0.17999999, y: 0.089999996}
+      - {x: -0.17999999, y: -0.11}
+      - {x: -0.06, y: -0.13}
+      - {x: 0.08, y: -0.13}
+      - {x: 0.14999999, y: -0.049999997}
+      - {x: 0.14999999, y: 0.099999994}
+      - {x: 0.099999994, y: 0.19}

@@ -66,12 +66,16 @@ public class Items : MonoBehaviour
                 link.leave();
                 break;
             case InteractionType.Coalpile:
-                Debug.Log("Coalpile_interaction");
-                Instantiate(Coal, new Vector3(1, 1, 1), Quaternion.identity);
+                resource_spawner interaction = gameObject.GetComponent<resource_spawner>();
+                interaction.SpawnCoals();
                 break;
             case InteractionType.Tree:
-                Debug.Log("Trees_interaction");
-                Instantiate(wood, new Vector3(1, 1, 1), Quaternion.identity);
+                resource_spawner interaction2 = gameObject.GetComponent<resource_spawner>();
+                interaction2.SpawnWood();
+                resource_spawner interaction3 = gameObject.GetComponent<resource_spawner>();
+                interaction3.SpawnLeaves();
+                resource_spawner interaction4 = gameObject.GetComponent<resource_spawner>();
+                interaction4.SpawnSticks();
                 break;
             default:
                 Debug.Log("NULL");

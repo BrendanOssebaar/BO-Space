@@ -7,7 +7,7 @@ public class PlayerMovement : MonoBehaviour
     public float movementSpeed = 10;
     private Rigidbody2D player;
     public float jumpHeight = 27;
-    private bool onGround;
+    public bool onGround;
 
     void Start()
     {
@@ -37,11 +37,7 @@ public class PlayerMovement : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         onGround = true;
-
-        
     }
-
-
     private void OnCollisionExit2D(Collision2D collision)
     {
         onGround = false;

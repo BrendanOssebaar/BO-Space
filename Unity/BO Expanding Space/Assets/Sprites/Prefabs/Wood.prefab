@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 342313506633318001}
   - component: {fileID: 7425197606068626055}
   - component: {fileID: 387679213818008394}
-  - component: {fileID: 2444436816009549709}
   m_Layer: 6
   m_Name: Wood
   m_TagString: Untagged
@@ -102,7 +101,7 @@ MonoBehaviour:
   Leaf: {fileID: 0}
   rodite: {fileID: 0}
   stick: {fileID: 0}
-  wood: {fileID: 0}
+  wood: {fileID: 2922535817566105619}
 --- !u!60 &387679213818008394
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -145,24 +144,3 @@ PolygonCollider2D:
       - {x: 0.37, y: -0.5}
       - {x: 0.51, y: -0.48}
       - {x: 0.61, y: -0.42999998}
---- !u!50 &2444436816009549709
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2922535817566105619}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0

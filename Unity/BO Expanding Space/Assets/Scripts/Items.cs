@@ -5,9 +5,9 @@ using UnityEngine;
 public class Items : MonoBehaviour
 {
     [SerializeField]
-    private enum InteractionType { WoodFuel,LeafFuel,StickFuel,CoalFuel,RoditeFuel,Leave,Coalpile,Tree}
+    public enum InteractionType { WoodFuel,LeafFuel,StickFuel,CoalFuel,RoditeFuel,Leave,Coalpile,Tree}
     [SerializeField]
-    private InteractionType type;
+    public InteractionType type;
     [SerializeField]
     private GameObject Coal;
     [SerializeField]
@@ -18,7 +18,7 @@ public class Items : MonoBehaviour
     private GameObject stick;
     [SerializeField]
     private GameObject wood;
-
+    public int amount;
     private void Reset()
     {
         GetComponent<Collider2D>().isTrigger = true;

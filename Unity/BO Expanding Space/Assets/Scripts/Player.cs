@@ -12,10 +12,11 @@ public class Player : MonoBehaviour
     public int currentFuel;
     public Fuelbar fuelbar;
 
+    private Inventory inventory;
     void Start()
     {
         currentTime = startingTime;
-        
+        inventory = new Inventory();
         fuelbar.setMaxFuel(maxFuel);
         currentFuel = 0;
     }

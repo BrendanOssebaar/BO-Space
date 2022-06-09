@@ -74,6 +74,18 @@ public class Items : MonoBehaviour
                 break;
         }
     }
+    public Sprite GetSprite()
+    {
+        switch(type)
+        {
+            default:
+            case InteractionType.CoalFuel:       return ItemAssets.Instance.Coal;
+            case InteractionType.LeafFuel: return ItemAssets.Instance.Leaf;
+            case InteractionType.RoditeFuel: return ItemAssets.Instance.Rodite;
+            case InteractionType.StickFuel: return ItemAssets.Instance.Stick;
+            case InteractionType.WoodFuel: return ItemAssets.Instance.Wood;
+        }
+    }
 
 
 }

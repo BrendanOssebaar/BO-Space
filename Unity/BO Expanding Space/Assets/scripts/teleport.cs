@@ -12,13 +12,13 @@ public class teleport : MonoBehaviour
     {
         if (gameObject.tag == "endsideA")
         {
-            player.transform.position = new Vector2(endB.gameObject.transform.position.x + 1, player.gameObject.transform.position.y);
+            player.transform.position = new Vector2(endB.gameObject.transform.position.x + 0.7f, player.gameObject.transform.position.y);
             Debug.Log("teleportA");
         }
 
         if (gameObject.tag == "endsideB")
         {
-            player.transform.position = new Vector2(endA.gameObject.transform.position.x + -1, player.gameObject.transform.position.y);
+            player.transform.position = new Vector2(endA.gameObject.transform.position.x + -0.7f, player.gameObject.transform.position.y);
             Debug.Log("teleportB");
         }
     }

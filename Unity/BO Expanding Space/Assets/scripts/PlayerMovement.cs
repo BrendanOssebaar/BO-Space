@@ -4,12 +4,14 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    public float movementSpeed = 10;
+    [SerializeField]
+    private float movementSpeed = 10;
     private Rigidbody2D player;
-    public float jumpHeight = 27;
-    public bool onGround;
+    [SerializeField]
+    private float jumpHeight = 27;
+    private bool onGround;
 
-    void Start()
+    void Awake()
     {
         player = GetComponent<Rigidbody2D>();
 
@@ -26,11 +28,11 @@ public class PlayerMovement : MonoBehaviour
             transform.position += new Vector3(movementSpeed, 0) * Time.deltaTime;
         }
         if ((onGround == true) && (Input.GetKeyDown(KeyCode.W)))
-        {
-            Vector2 jump = new Vector2(0, jumpHeight);
-
-            player.AddForce(jump, ForceMode2D.Impulse);
-            onGround = false;
+            {
+                Vector2 jump = new Vector2(0, jumpHeight);
+                player.velocity = new Vector2(player.velocity.x, 0);
+                player.AddForce(jump, ForceMode2D.Impulse);
+                onGround = false;
         }
     }
    

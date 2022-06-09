@@ -20,7 +20,7 @@ public class leave_planet : MonoBehaviour
         fuel = GameObject.Find("player").GetComponent<Player>().currentFuel;
         tank_full = GameObject.Find("player").GetComponent<Player>().maxFuel;
 
-        if (tank_full == fuel || tank_full < fuel)
+        if (tank_full <= fuel)
         {
             full = true;
             Debug.Log("full");

@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class Load_Scene : MonoBehaviour
+public class LoadScene : MonoBehaviour
 {
-    public void LoadScene(string sceneName)
+    public void loadScene(string sceneName)
     {
         SceneManager.LoadScene(sceneName);
     }

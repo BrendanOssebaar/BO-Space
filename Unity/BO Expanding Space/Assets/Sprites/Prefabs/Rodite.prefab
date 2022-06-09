@@ -97,11 +97,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: 4
-  Coal: {fileID: 0}
-  Leaf: {fileID: 0}
-  rodite: {fileID: 2928715378080781675}
-  stick: {fileID: 0}
-  wood: {fileID: 0}
+  amount: 0
 --- !u!60 &2697966414609241207
 PolygonCollider2D:
   m_ObjectHideFlags: 0

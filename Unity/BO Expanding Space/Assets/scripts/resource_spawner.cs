@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class resource_spawner : MonoBehaviour
 {
+
+    private float radius;
+    private Vector2 point;
+
     public GameObject logs;
     [Range(0.1f, 50.0f)]
     public float aantal_logs;
@@ -24,50 +28,55 @@ public class resource_spawner : MonoBehaviour
     [Range(0.1f, 50.0f)]
     public float aantal_gems;
 
-    // Start is called before the first frame update
+
     public void SpawnWood()
     {
         for (int i = (int)aantal_logs; i >0; i--)
         {
             Debug.Log("Trees_interaction");
-            Instantiate(logs, new Vector3(~1, ~1, ~1), Quaternion.identity);
+            radius = 1f;
+            point = Random.insideUnitCircle * radius + new Vector2(gameObject.transform.position.x, 0.5f+gameObject.transform.position.y);
+            Instantiate(logs, point, Quaternion.identity);
         }
-        
     }
     public void SpawnLeaves()
     {
         for (int i = (int)aantal_leaves; i > 0; i--)
         {
             Debug.Log("Trees_interaction");
-            Instantiate(leaves, new Vector3(~1, ~1, ~1), Quaternion.identity);
+            radius = 2.4f;
+            point = Random.insideUnitCircle * radius + new Vector2(gameObject.transform.position.x, 0.5f+gameObject.transform.position.y);
+            Instantiate(leaves, point, Quaternion.identity);
         }
-
     }
     public void SpawnSticks()
     {
         for (int i = (int)aantal_sticks; i > 0; i--)
         {
             Debug.Log("Trees_interaction");
-            Instantiate(sticks, new Vector3(~1, ~1, ~1), Quaternion.identity);
+            radius = 1.8f;
+            point = Random.insideUnitCircle * radius + new Vector2(gameObject.transform.position.x, 0.5f+gameObject.transform.position.y);
+            Instantiate(sticks, point, Quaternion.identity);
         }
-
     }
     public void SpawnCoals()
     {
         for (int i = (int)aantal_coal; i > 0; i--)
         {
-            Debug.Log("Trees_interaction");
-            Instantiate(coal, new Vector3(~1, ~1, ~1), Quaternion.identity);
+            Debug.Log("Coal_interaction");
+            radius = 2f;
+            point = Random.insideUnitCircle * radius + new Vector2(gameObject.transform.position.x, gameObject.transform.position.y);
+            Instantiate(coal, point, Quaternion.identity);
         }
-
     }
     public void SpawnGems()
     {
         for (int i = (int)aantal_gems; i > 0; i--)
         {
-            Debug.Log("Trees_interaction");
-            Instantiate(gems, new Vector3(~1, ~1, ~1), Quaternion.identity);
+            Debug.Log("Gem_interaction");
+            radius = 0.2f;
+            point = Random.insideUnitCircle * radius + new Vector2(gameObject.transform.position.x, gameObject.transform.position.y);
+            Instantiate(gems, point, Quaternion.identity);
         }
-
     }
 }

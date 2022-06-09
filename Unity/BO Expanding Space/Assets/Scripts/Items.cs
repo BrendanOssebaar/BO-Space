@@ -8,16 +8,6 @@ public class Items : MonoBehaviour
     public enum InteractionType { WoodFuel,LeafFuel,StickFuel,CoalFuel,RoditeFuel,Leave,Coalpile,Tree}
     [SerializeField]
     public InteractionType type;
-    [SerializeField]
-    private GameObject Coal;
-    [SerializeField]
-    private GameObject Leaf;
-    [SerializeField]
-    private GameObject rodite;
-    [SerializeField]
-    private GameObject stick;
-    [SerializeField]
-    private GameObject wood;
     public int amount;
     private void Reset()
     {
@@ -67,6 +57,7 @@ public class Items : MonoBehaviour
                 break;
             case InteractionType.Coalpile:
                 resource_spawner interaction = gameObject.GetComponent<resource_spawner>();
+                Destroy(gameObject);
                 interaction.SpawnCoals();
                 break;
             case InteractionType.Tree:
@@ -76,6 +67,7 @@ public class Items : MonoBehaviour
                 interaction3.SpawnLeaves();
                 resource_spawner interaction4 = gameObject.GetComponent<resource_spawner>();
                 interaction4.SpawnSticks();
+                Destroy(gameObject);
                 break;
             default:
                 Debug.Log("NULL");

@@ -5,23 +5,23 @@ using UnityEngine;
 public class resource_spawner : MonoBehaviour
 {
     public GameObject logs;
-    [Range(0.0f, 50.0f)]
+    [Range(0.1f, 50.0f)]
     public float aantal_logs;
 
     public GameObject leaves;
-    [Range(0.0f, 50.0f)]
+    [Range(0.1f, 50.0f)]
     public float aantal_leaves;
 
     public GameObject sticks;
-    [Range(0.0f, 50.0f)]
+    [Range(0.1f, 50.0f)]
     public float aantal_sticks;
 
     public GameObject coal;
-    [Range(0.0f, 50.0f)]
+    [Range(0.1f, 50.0f)]
     public float aantal_coal;
 
     public GameObject gems;
-    [Range(0.0f, 50.0f)]
+    [Range(0.1f, 50.0f)]
     public float aantal_gems;
 
     // Start is called before the first frame update

@@ -6,7 +6,8 @@ using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
-    [SerializeField] public UI_Inventory uiinventory;
+    [SerializeField] 
+    public UI_Inventory uiinventory;
     float currentTime;
     float startingTime = 10000f;
     public int maxFuel = 2000;

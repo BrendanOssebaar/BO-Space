@@ -9,29 +9,29 @@ public class resource_spawner : MonoBehaviour
     private Vector2 point;
 
     public GameObject logs;
-    [Range(0.1f, 50.0f)]
-    public float aantal_logs;
+    [Range(0, 50)]
+    public int aantal_logs;
 
     public GameObject leaves;
-    [Range(0.1f, 50.0f)]
-    public float aantal_leaves;
+    [Range(0, 50)]
+    public int aantal_leaves;
 
     public GameObject sticks;
-    [Range(0.1f, 50.0f)]
-    public float aantal_sticks;
+    [Range(0, 50)]
+    public int aantal_sticks;
 
     public GameObject coal;
-    [Range(0.1f, 50.0f)]
-    public float aantal_coal;
+    [Range(0, 50)]
+    public int aantal_coal;
 
     public GameObject gems;
-    [Range(0.1f, 50.0f)]
-    public float aantal_gems;
+    [Range(0, 50)]
+    public int aantal_gems;
 
 
     public void SpawnWood()
     {
-        for (int i = (int)aantal_logs; i >0; i--)
+        for (int i = aantal_logs; i >0; i--)
         {
             Debug.Log("Trees_interaction");
             radius = 1f;
@@ -41,7 +41,7 @@ public class resource_spawner : MonoBehaviour
     }
     public void SpawnLeaves()
     {
-        for (int i = (int)aantal_leaves; i > 0; i--)
+        for (int i = aantal_leaves; i > 0; i--)
         {
             Debug.Log("Trees_interaction");
             radius = 2.4f;
@@ -51,7 +51,7 @@ public class resource_spawner : MonoBehaviour
     }
     public void SpawnSticks()
     {
-        for (int i = (int)aantal_sticks; i > 0; i--)
+        for (int i = aantal_sticks; i > 0; i--)
         {
             Debug.Log("Trees_interaction");
             radius = 1.8f;
@@ -61,7 +61,7 @@ public class resource_spawner : MonoBehaviour
     }
     public void SpawnCoals()
     {
-        for (int i = (int)aantal_coal; i > 0; i--)
+        for (int i = aantal_coal; i > 0; i--)
         {
             Debug.Log("Coal_interaction");
             radius = 2f;
@@ -71,7 +71,7 @@ public class resource_spawner : MonoBehaviour
     }
     public void SpawnGems()
     {
-        for (int i = (int)aantal_gems; i > 0; i--)
+        for (int i = aantal_gems; i > 0; i--)
         {
             Debug.Log("Gem_interaction");
             radius = 0.2f;

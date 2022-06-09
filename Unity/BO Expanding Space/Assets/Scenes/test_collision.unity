@@ -12486,6 +12486,52 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 387679213818008394, guid: b0902a179d4054d41b72623f52b5101d, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: b0902a179d4054d41b72623f52b5101d, type: 3}
+--- !u!1 &1603499817
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1603499819}
+  - component: {fileID: 1603499818}
+  m_Layer: 0
+  m_Name: PlanetStats
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1603499818
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1603499817}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7947954ca3482f549bae43892d681e0d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PlanetType: 2
+  currentFuel: 0
+  fuelbar: {fileID: 1059190321}
+--- !u!4 &1603499819
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1603499817}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -126.6421, y: 39.463898, z: -7627.076}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 11
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1603920377
 GameObject:
   m_ObjectHideFlags: 0
@@ -14489,7 +14535,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2697966414609241207, guid: d8333e8f5220b3645a67690c47342384, type: 3}
       propertyPath: m_IsTrigger
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2928715378080781675, guid: d8333e8f5220b3645a67690c47342384, type: 3}
       propertyPath: m_Name

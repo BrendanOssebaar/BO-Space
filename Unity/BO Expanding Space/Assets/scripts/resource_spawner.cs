@@ -65,7 +65,7 @@ public class resource_spawner : MonoBehaviour
         {
             Debug.Log("Coal_interaction");
             radius = 2f;
-            point = Random.insideUnitCircle * radius + new Vector2(gameObject.transform.position.x, gameObject.transform.position.y);
+            point = Random.insideUnitCircle * radius + new Vector2(gameObject.transform.position.x, 0.5f+gameObject.transform.position.y);
             Instantiate(coal, point, Quaternion.identity);
         }
     }
@@ -75,7 +75,7 @@ public class resource_spawner : MonoBehaviour
         {
             Debug.Log("Gem_interaction");
             radius = 0.2f;
-            point = Random.insideUnitCircle * radius + new Vector2(gameObject.transform.position.x, gameObject.transform.position.y);
+            point = Random.insideUnitCircle * radius + new Vector2(gameObject.transform.position.x, 0.5f+gameObject.transform.position.y);
             Instantiate(gems, point, Quaternion.identity);
         }
     }

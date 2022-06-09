@@ -13,21 +13,25 @@ public class CamFollow : MonoBehaviour
     {
         
     }
-
-    
-    void Update()
+    void checkPlayerPos()
     {
         posx = player.transform.position.x;
         posy = player.transform.position.y;
 
         if (posy == 0)
         {
-            posy = 0; 
+            posy = 0;
         }
 
-        else {
-            transform.position = new Vector3(posx,posy,-10);
+        else
+        {
+            transform.position = new Vector3(posx, posy, -10);
         }
+    }
+    
+    void Update()
+    {
+        checkPlayerPos();
         
     }
 }

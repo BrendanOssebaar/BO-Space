@@ -15,8 +15,7 @@ public class PlayerMovement : MonoBehaviour
 
     }
 
-   
-    void Update()
+    void Movement()
     {
         if (Input.GetKey(KeyCode.A))
         {
@@ -24,15 +23,20 @@ public class PlayerMovement : MonoBehaviour
         }
         if (Input.GetKey(KeyCode.D))
         {
-            transform.position += new Vector3(movementSpeed, 0) * Time.deltaTime;  
+            transform.position += new Vector3(movementSpeed, 0) * Time.deltaTime;
         }
         if ((onGround == true) && (Input.GetKeyDown(KeyCode.W)))
-            {
-                Vector2 jump = new Vector2(0, jumpHeight);
-                
-                player.AddForce(jump, ForceMode2D.Impulse);
-                onGround = false;
+        {
+            Vector2 jump = new Vector2(0, jumpHeight);
+
+            player.AddForce(jump, ForceMode2D.Impulse);
+            onGround = false;
         }
+    }
+   
+    void Update()
+    {
+        Movement();
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {

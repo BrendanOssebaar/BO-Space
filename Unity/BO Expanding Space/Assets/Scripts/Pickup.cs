@@ -9,15 +9,23 @@ public class Pickup : MonoBehaviour
     public LayerMask detectionLayer;
     public GameObject detectedObject;
     public List<GameObject> pickedItems = new List<GameObject>();
-    void Update()
+
+
+    void checkObject()
     {
-        if(DetectObject())
+        if (DetectObject())
         {
-            if(InteractionInput())
+            if (InteractionInput())
             {
                 detectedObject.GetComponent<Items>().Interact();
             }
         }
+    }
+
+
+    void Update()
+    {
+        checkObject();
        
     }
     internal bool InteractionInput()

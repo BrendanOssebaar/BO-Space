@@ -23,14 +23,18 @@ public class Player : MonoBehaviour
         fuelbar.setMaxFuel(maxFuel);
         currentFuel = 0;
     }
-    
-    void Update()
+    void checkTime()
     {
         currentTime -= 1 * Time.deltaTime;
-        if(currentTime <= 0)
+        if (currentTime <= 0)
         {
             SceneManager.LoadScene(1);
         }
+    }
+    
+    void Update()
+    {
+        checkTime();
         
     }
 

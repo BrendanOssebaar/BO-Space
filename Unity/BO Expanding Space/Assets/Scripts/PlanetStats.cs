@@ -9,7 +9,7 @@ public class PlanetStats : MonoBehaviour
     public enum planetType {Desert, Ruined, Lush }
     public planetType PlanetType;
     float currentTime;
-    float startingTime = 10f;
+    float startingTime = 300f;
     private int maxFuel;
     public int currentFuel;
     public Fuelbar fuelbar;

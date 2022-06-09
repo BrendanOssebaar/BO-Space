@@ -18,7 +18,7 @@ public class Player : MonoBehaviour
     {
         currentTime = startingTime;
         inventory = new Inventory();
-        uiinventory.SetInventory(inventory);
+      //  uiinventory.SetInventory(inventory);
         fuelbar.setMaxFuel(maxFuel);
         currentFuel = 0;
     }

@@ -5200,7 +5200,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b673469a86ea99b4f89a85d347439a62, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  uiInventory: {fileID: 1447451311}
+  uiInventory: {fileID: 0}
   maxFuel: 2000
   currentFuel: 0
   fuelbar: {fileID: 1059190321}
@@ -13030,7 +13030,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1603920378
 RectTransform:
   m_ObjectHideFlags: 0

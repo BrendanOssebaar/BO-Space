@@ -46,10 +46,6 @@ public class PlanetStats : MonoBehaviour
         {
             SceneManager.LoadScene(1);
         }
-        if (currentFuel >= 2000)
-        {
-            SceneManager.LoadScene(2);
-        }
     }
 
 }

@@ -27,7 +27,7 @@ public class Player : MonoBehaviour
         currentTime -= 1 * Time.deltaTime;
         if (currentTime <= 0)
         {
-            SceneManager.LoadScene(1);
+            SceneManager.LoadScene(3);
         }
     }
    

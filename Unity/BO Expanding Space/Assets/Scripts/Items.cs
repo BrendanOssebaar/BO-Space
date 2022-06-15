@@ -9,6 +9,7 @@ public class Items : MonoBehaviour
     [SerializeField]
     public InteractionType type;
     public int amount;
+   
     private void Reset()
     {
         GetComponent<Collider2D>().isTrigger = true;

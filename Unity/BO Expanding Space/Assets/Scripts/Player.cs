@@ -8,7 +8,7 @@ public class Player : MonoBehaviour
 {
     [SerializeField] public UI_Inventory uiInventory;
     float currentTime;
-    float startingTime = 300f;
+    float startingTime = 500f;
     public int maxFuel;
     public int currentFuel;
     public Fuelbar fuelbar;
@@ -30,18 +30,11 @@ public class Player : MonoBehaviour
             SceneManager.LoadScene(1);
         }
     }
-    void checkFullFuel()
-    {
-        if(currentFuel >= maxFuel)
-        {
-            SceneManager.LoadScene(2);
-        }
-    }
+   
     
     void Update()
     {
         checkTime();
-        checkFullFuel();
         
     }
 

@@ -23,7 +23,6 @@ public class leave_planet : MonoBehaviour
         if (tank_full <= fuel)
         {
             full = true;
-            Debug.Log("full");
         }
     }
    

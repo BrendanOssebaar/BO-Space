@@ -34,7 +34,7 @@ public class PlanetStats : MonoBehaviour
         void Start()
     {
         currentTime = startingTime;
-        fuelbar.setMaxFuel(maxFuel);
+        // fuelbar.setMaxFuel(maxFuel);
         currentFuel = 0;
     }
 

@@ -9,7 +9,7 @@ public class PlanetStats : MonoBehaviour
     public enum planetType {Desert, Ruined, Lush }
     public planetType PlanetType;
     float currentTime;
-    float startingTime = 300f;
+    
     public int maxFuel;
     public int currentFuel;
     public Fuelbar fuelbar;
@@ -36,7 +36,7 @@ public class PlanetStats : MonoBehaviour
     }
         void Start()
     {
-        currentTime = startingTime;
+        
         fuelbar.setMaxFuel(maxFuel);
         currentFuel = 0;
         Planets();

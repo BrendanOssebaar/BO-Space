@@ -686,6 +686,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d292afeaf61699b409e2053c8580e830, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 0}
+  overlay: {fileID: 0}
+  overlay2: {fileID: 0}
 --- !u!4 &1630221371
 Transform:
   m_ObjectHideFlags: 0
@@ -859,7 +862,7 @@ GameObject:
   - component: {fileID: 1900441223}
   - component: {fileID: 1900441222}
   m_Layer: 0
-  m_Name: 017
+  m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

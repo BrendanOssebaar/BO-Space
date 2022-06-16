@@ -30,4 +30,8 @@ public class LoadScene : MonoBehaviour
         overlay2.SetActive(true);
 
     }
+    public void Next(string sceneName)
+    {
+        SceneManager.LoadScene(2);
+    }
 }

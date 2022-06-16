@@ -8,7 +8,7 @@ public class PlanetStats : MonoBehaviour
 {
     public enum planetType {Desert, Ruined, Lush }
     public planetType PlanetType;
-    float currentTime;
+    
     
     public int maxFuel;
     public int currentFuel;
@@ -44,12 +44,7 @@ public class PlanetStats : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        currentTime -= 1 * Time.deltaTime;
-        if (currentTime <= 0)
-        {
-            SceneManager.LoadScene(3);
-        }
-        
+                
     }
     public void AddFuel(int addedfuel)
     {

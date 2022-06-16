@@ -39,6 +39,7 @@ public class PlanetStats : MonoBehaviour
         currentTime = startingTime;
         fuelbar.setMaxFuel(maxFuel);
         currentFuel = 0;
+        Planets();
     }
 
     // Update is called once per frame
@@ -49,7 +50,7 @@ public class PlanetStats : MonoBehaviour
         {
             SceneManager.LoadScene(3);
         }
-        Planets();
+        
     }
     public void AddFuel(int addedfuel)
     {

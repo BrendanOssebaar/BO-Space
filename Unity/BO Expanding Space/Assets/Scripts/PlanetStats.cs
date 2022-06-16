@@ -10,31 +10,34 @@ public class PlanetStats : MonoBehaviour
     public planetType PlanetType;
     float currentTime;
     float startingTime = 300f;
-    private int maxFuel;
+    public int maxFuel;
     public int currentFuel;
     public Fuelbar fuelbar;
-    public void planets()
+    public int Planets()
     {
         switch(PlanetType)
         {
+            default:
+                maxFuel = 0;
+                return maxFuel;
             case planetType.Desert:
                 Debug.Log("Desert");
                 maxFuel = 500;
-                break;
+                return maxFuel;
             case planetType.Ruined:
                 Debug.Log("Ruined");
                 maxFuel = 1500;
-                break;
+                return maxFuel;
             case planetType.Lush:
                 Debug.Log("Lush");
                 maxFuel = 3000;
-                break;
+                return maxFuel;
         }
     }
         void Start()
     {
         currentTime = startingTime;
-        // fuelbar.setMaxFuel(maxFuel);
+        fuelbar.setMaxFuel(maxFuel);
         currentFuel = 0;
     }
 
@@ -46,6 +49,12 @@ public class PlanetStats : MonoBehaviour
         {
             SceneManager.LoadScene(3);
         }
+        Planets();
+    }
+    public void AddFuel(int addedfuel)
+    {
+        currentFuel += addedfuel;
+        fuelbar.setFuel(currentFuel);
     }
 
 }

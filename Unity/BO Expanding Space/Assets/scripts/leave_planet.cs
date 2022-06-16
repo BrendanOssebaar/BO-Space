@@ -14,16 +14,19 @@ public class leave_planet : MonoBehaviour
     [SerializeField]
     private bool full = false;
     
-
-    void Update()
+    void checkfullfuel()
     {
-        fuel = GameObject.Find("player").GetComponent<Player>().currentFuel;
-        tank_full = GameObject.Find("player").GetComponent<Player>().maxFuel;
+        fuel = GetComponent<PlanetStats>().currentFuel;
+        tank_full = GetComponent<PlanetStats>().maxFuel;
 
         if (tank_full <= fuel)
         {
             full = true;
         }
+    }
+    void Update()
+    {
+        checkfullfuel();
     }
    
     public void leave()

@@ -13,11 +13,13 @@ public class leave_planet : MonoBehaviour
     private int tank_full;
     [SerializeField]
     private bool full = false;
+    [SerializeField]
+    private GameObject planetstat;
     
     void checkfullfuel()
     {
-        fuel = GetComponent<PlanetStats>().currentFuel;
-        tank_full = GetComponent<PlanetStats>().maxFuel;
+        fuel = planetstat.GetComponent<PlanetStats>().currentFuel;
+        tank_full = planetstat.GetComponent<PlanetStats>().maxFuel;
 
         if (tank_full <= fuel)
         {

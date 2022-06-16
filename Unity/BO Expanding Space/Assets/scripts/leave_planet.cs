@@ -28,7 +28,7 @@ public class leave_planet : MonoBehaviour
     {
         checkfullfuel();
     }
-   
+
     public void leave()
     {
         if (full == true)

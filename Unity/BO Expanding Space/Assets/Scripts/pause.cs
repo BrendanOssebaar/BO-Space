@@ -23,6 +23,7 @@ public class pause : MonoBehaviour
         {
             
             player.GetComponent<PlayerMovement>().enabled = false;
+            player.GetComponent<Player>().enabled = false;
             overlay.SetActive(true);
             overlay2.SetActive(false);
         }

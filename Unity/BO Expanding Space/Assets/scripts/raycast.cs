@@ -5,7 +5,7 @@ using UnityEngine;
 public class raycast : MonoBehaviour
 {
     public LayerMask layermask;
-    public int offset1 = 10000;
+    public int offset1 = 1;
 
 
     void Start()

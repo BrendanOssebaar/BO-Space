@@ -5,7 +5,7 @@ using UnityEngine;
 public class Pickup : MonoBehaviour
 {
     public Transform detectionPoint;
-    private const float detectionRadius = 0.2f;
+    private const float detectionRadius = 0.5f;
     public LayerMask detectionLayer;
     public GameObject detectedObject;
     public List<GameObject> pickedItems = new List<GameObject>();
@@ -35,6 +35,7 @@ public class Pickup : MonoBehaviour
     bool DetectObject()
     {
         Collider2D obj = Physics2D.OverlapCircle(detectionPoint.position,detectionRadius,detectionLayer);
+        
         if (obj == null)
         {
             detectedObject = null;

@@ -35,7 +35,7 @@ public class resource_spawner : MonoBehaviour
         {
             Debug.Log("Trees_interaction");
             radius = 1f;
-            point = Random.insideUnitCircle * radius + new Vector2(gameObject.transform.position.x, 0.5f+gameObject.transform.position.y);
+            point = Random.insideUnitCircle * radius + new Vector2(gameObject.transform.position.x, gameObject.transform.position.y);
             Instantiate(logs, point, Quaternion.identity);
         }
     }
@@ -64,8 +64,8 @@ public class resource_spawner : MonoBehaviour
         for (int i = aantal_coal; i > 0; i--)
         {
             Debug.Log("Coal_interaction");
-            radius = 2f;
-            point = Random.insideUnitCircle * radius + new Vector2(gameObject.transform.position.x, 0.5f+gameObject.transform.position.y);
+            radius = 1f;
+            point = Random.insideUnitCircle * radius + new Vector2(gameObject.transform.position.x, 1f+gameObject.transform.position.y);
             Instantiate(coal, point, Quaternion.identity);
         }
     }

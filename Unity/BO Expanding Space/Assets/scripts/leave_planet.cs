@@ -14,6 +14,7 @@ public class leave_planet : MonoBehaviour
     [SerializeField]
     private bool full = false;
     public PlanetStats planetstats;
+    public string scene;
     void checkfullfuel()
     {
         fuel = planetstats.GetComponent<PlanetStats>().currentFuel;
@@ -34,7 +35,7 @@ public class leave_planet : MonoBehaviour
         if (full == true)
         {
             Debug.Log("end_leave");
-            SceneManager.LoadScene("WinScene");
+            SceneManager.LoadScene(scene);
         }
     }
 }

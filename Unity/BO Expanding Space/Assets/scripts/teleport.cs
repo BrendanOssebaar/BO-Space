@@ -7,8 +7,8 @@ public class teleport : MonoBehaviour
     public GameObject player;
     public GameObject endA;
     public GameObject endB;
-  
-    private void OnTriggerEnter2D(Collider2D collision)
+    
+     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (gameObject.tag == "endsideA")
         {
@@ -22,4 +22,5 @@ public class teleport : MonoBehaviour
             Debug.Log("teleportB");
         }
     }
-}
+      
+}    

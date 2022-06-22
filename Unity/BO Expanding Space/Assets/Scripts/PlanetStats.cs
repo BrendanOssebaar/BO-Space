@@ -41,7 +41,7 @@ public class PlanetStats : MonoBehaviour
         Planets();
     }
 
-    // Update is called once per frame
+   
     void Update()
     {
                 

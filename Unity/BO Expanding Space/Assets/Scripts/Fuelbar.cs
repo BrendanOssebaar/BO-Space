@@ -13,8 +13,8 @@ public class Fuelbar : MonoBehaviour
         slider.maxValue = Fuel;
     }
 
-    public void setFuel(int Fuel)
+    public void setFuel(int fuel)
     {
-        slider.value = Fuel;
+        slider.value = fuel;
     }
 }

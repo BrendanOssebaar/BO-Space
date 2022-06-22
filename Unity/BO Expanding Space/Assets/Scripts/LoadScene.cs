@@ -30,5 +30,17 @@ public class LoadScene : MonoBehaviour
         overlay2.SetActive(true);
 
     }
+    public void FromMainToDesert()
+    {
+        SceneManager.LoadScene(2);
+    }
+    public void FromDesertToRuined()
+    {
+        SceneManager.LoadScene(4);
+    }
+    public void FromRuinedToLush()
+    {
+        SceneManager.LoadScene(5);
+    }
     
 }

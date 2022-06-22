@@ -12844,6 +12844,7 @@ MonoBehaviour:
   tank_full: 0
   full: 0
   planetstats: {fileID: 1865186403}
+  scene: WinScene
 --- !u!212 &1418954011
 SpriteRenderer:
   m_ObjectHideFlags: 0

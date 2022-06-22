@@ -11,12 +11,18 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/start_menu.unity
     guid: 88cac83082bd7134dac1fdf6c90c9e0b
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Intermission main - desert.unity
     guid: 3bdd954decc9b4e4d8dcaf2d61b16f33
   - enabled: 1
     path: Assets/Scenes/desert_planet.unity
     guid: 7743527232260ac4e850b0c96b86f180
+  - enabled: 1
+    path: Assets/Scenes/Intermission desert- ruined.unity
+    guid: f65d53304a7fb0b4b8f33cff4d568103
+  - enabled: 1
+    path: Assets/Scenes/Intermission ruined - lush.unity
+    guid: 2dbfcddd14e03704ca5ec659da3bd7d2
   - enabled: 1
     path: Assets/Scenes/test_collision.unity
     guid: ef287f5de2f1eb84c8be10dd92b92edf

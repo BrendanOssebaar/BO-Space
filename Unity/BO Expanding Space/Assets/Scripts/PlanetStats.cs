@@ -41,15 +41,15 @@ public class PlanetStats : MonoBehaviour
         Planets();
     }
 
-   
-    void Update()
-    {
-                
-    }
     public void AddFuel(int addedfuel)
     {
         currentFuel += addedfuel;
         fuelbar.setFuel(currentFuel);
     }
+    public void Update()
+    {
+               
+    }
+    
 
 }

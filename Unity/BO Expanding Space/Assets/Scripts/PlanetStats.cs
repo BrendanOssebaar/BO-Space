@@ -34,11 +34,12 @@ public class PlanetStats : MonoBehaviour
                 return maxFuel;
         }
     }
-        public void Start()
+     public void Start()
     {
+        Planets();
         fuelbar.setMaxFuel(maxFuel);
         currentFuel = 0;
-        Planets();
+        
     }
 
     public void AddFuel(int addedfuel)

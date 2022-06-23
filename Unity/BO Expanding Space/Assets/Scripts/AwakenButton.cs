@@ -14,7 +14,7 @@ public class AwakenButton : MonoBehaviour
     void checkTime()
     {
         currentTime += 1 * Time.deltaTime;
-        if (currentTime >= 15)
+        if (currentTime >= 5)
         {
             button.SetActive(true);
         }

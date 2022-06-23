@@ -22,37 +22,37 @@ public class Items : MonoBehaviour
         {
             case InteractionType.LeafFuel:
                 // leaf
-                
+                Debug.Log("Leaf");
                 FindObjectOfType<Pickup>().PickUpItem(gameObject);
                 FindObjectOfType<PlanetStats>().AddFuel(1);
                 Destroy(gameObject);
                 break;
             case InteractionType.StickFuel:
-                
+                Debug.Log("Stick");
                 FindObjectOfType<Pickup>().PickUpItem(gameObject);
                 FindObjectOfType<PlanetStats>().AddFuel(5);
                 Destroy(gameObject);
                 break;
             case InteractionType.WoodFuel:
-                
+                Debug.Log("Wood");
                 FindObjectOfType<Pickup>().PickUpItem(gameObject);
                 FindObjectOfType<PlanetStats>().AddFuel(10);
                 Destroy(gameObject);
                 break;
             case InteractionType.CoalFuel:
-                
+                Debug.Log("Coal");
                 FindObjectOfType<Pickup>().PickUpItem(gameObject);
                 FindObjectOfType<PlanetStats>().AddFuel(50);
                 Destroy(gameObject);
                 break;
             case InteractionType.RoditeFuel:
-                
+                Debug.Log("Rodite");
                 FindObjectOfType<Pickup>().PickUpItem(gameObject);
                 FindObjectOfType<PlanetStats>().AddFuel(250);
                 Destroy(gameObject);
                 break;
             case InteractionType.Leave:
-                
+                Debug.Log("Leave");
                 leave_planet link = gameObject.GetComponent<leave_planet>();
                 link.leave();
                 break;

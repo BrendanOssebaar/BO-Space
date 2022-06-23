@@ -476,7 +476,7 @@ MonoBehaviour:
   sticks: {fileID: 6855868267463725216, guid: 62c8bc7f1cd531a458a16da64ce070ca, type: 3}
   aantal_sticks: 0
   coal: {fileID: 7298725854356355703, guid: 22f400958c920c94bb9a3522f056afb9, type: 3}
-  aantal_coal: 2
+  aantal_coal: 3
   gems: {fileID: 2928715378080781675, guid: d8333e8f5220b3645a67690c47342384, type: 3}
   aantal_gems: 0
 --- !u!1 &37642558
@@ -4009,7 +4009,7 @@ MonoBehaviour:
   sticks: {fileID: 6855868267463725216, guid: 62c8bc7f1cd531a458a16da64ce070ca, type: 3}
   aantal_sticks: 0
   coal: {fileID: 7298725854356355703, guid: 22f400958c920c94bb9a3522f056afb9, type: 3}
-  aantal_coal: 5
+  aantal_coal: 6
   gems: {fileID: 2928715378080781675, guid: d8333e8f5220b3645a67690c47342384, type: 3}
   aantal_gems: 0
 --- !u!1 &550427758
@@ -5314,7 +5314,7 @@ MonoBehaviour:
   sticks: {fileID: 6855868267463725216, guid: 62c8bc7f1cd531a458a16da64ce070ca, type: 3}
   aantal_sticks: 0
   coal: {fileID: 7298725854356355703, guid: 22f400958c920c94bb9a3522f056afb9, type: 3}
-  aantal_coal: 5
+  aantal_coal: 7
   gems: {fileID: 2928715378080781675, guid: d8333e8f5220b3645a67690c47342384, type: 3}
   aantal_gems: 0
 --- !u!1 &928809138
@@ -7672,7 +7672,7 @@ MonoBehaviour:
   sticks: {fileID: 6855868267463725216, guid: 62c8bc7f1cd531a458a16da64ce070ca, type: 3}
   aantal_sticks: 0
   coal: {fileID: 7298725854356355703, guid: 22f400958c920c94bb9a3522f056afb9, type: 3}
-  aantal_coal: 5
+  aantal_coal: 8
   gems: {fileID: 2928715378080781675, guid: d8333e8f5220b3645a67690c47342384, type: 3}
   aantal_gems: 0
 --- !u!1 &1194534840
@@ -10552,7 +10552,7 @@ MonoBehaviour:
   sticks: {fileID: 6855868267463725216, guid: 62c8bc7f1cd531a458a16da64ce070ca, type: 3}
   aantal_sticks: 0
   coal: {fileID: 7298725854356355703, guid: 22f400958c920c94bb9a3522f056afb9, type: 3}
-  aantal_coal: 5
+  aantal_coal: 7
   gems: {fileID: 2928715378080781675, guid: d8333e8f5220b3645a67690c47342384, type: 3}
   aantal_gems: 0
 --- !u!1 &1653435176
@@ -10720,7 +10720,7 @@ MonoBehaviour:
   sticks: {fileID: 6855868267463725216, guid: 62c8bc7f1cd531a458a16da64ce070ca, type: 3}
   aantal_sticks: 0
   coal: {fileID: 7298725854356355703, guid: 22f400958c920c94bb9a3522f056afb9, type: 3}
-  aantal_coal: 5
+  aantal_coal: 8
   gems: {fileID: 2928715378080781675, guid: d8333e8f5220b3645a67690c47342384, type: 3}
   aantal_gems: 0
 --- !u!1 &1670152326
@@ -10888,7 +10888,7 @@ MonoBehaviour:
   sticks: {fileID: 6855868267463725216, guid: 62c8bc7f1cd531a458a16da64ce070ca, type: 3}
   aantal_sticks: 0
   coal: {fileID: 7298725854356355703, guid: 22f400958c920c94bb9a3522f056afb9, type: 3}
-  aantal_coal: 5
+  aantal_coal: 8
   gems: {fileID: 2928715378080781675, guid: d8333e8f5220b3645a67690c47342384, type: 3}
   aantal_gems: 0
 --- !u!1 &1671491309
@@ -12505,7 +12505,7 @@ MonoBehaviour:
   sticks: {fileID: 6855868267463725216, guid: 62c8bc7f1cd531a458a16da64ce070ca, type: 3}
   aantal_sticks: 0
   coal: {fileID: 7298725854356355703, guid: 22f400958c920c94bb9a3522f056afb9, type: 3}
-  aantal_coal: 5
+  aantal_coal: 7
   gems: {fileID: 2928715378080781675, guid: d8333e8f5220b3645a67690c47342384, type: 3}
   aantal_gems: 0
 --- !u!1 &2081297402
@@ -12667,7 +12667,7 @@ MonoBehaviour:
   sticks: {fileID: 6855868267463725216, guid: 62c8bc7f1cd531a458a16da64ce070ca, type: 3}
   aantal_sticks: 0
   coal: {fileID: 7298725854356355703, guid: 22f400958c920c94bb9a3522f056afb9, type: 3}
-  aantal_coal: 2
+  aantal_coal: 4
   gems: {fileID: 2928715378080781675, guid: d8333e8f5220b3645a67690c47342384, type: 3}
   aantal_gems: 0
 --- !u!1 &2097637679

@@ -9,9 +9,9 @@ public class Player : MonoBehaviour
     [SerializeField] public UI_Inventory uiInventory;
     float currentTime;
     float startingTime = 300f;
-    // public int maxFuel;
-    // public int currentFuel;
-    // public Fuelbar fuelbar; 
+    public int maxFuel;
+    public int currentFuel;
+    public Fuelbar fuelbar; 
 
     private Inventory inventory;
     void Start()

@@ -9,6 +9,7 @@ public class Pickup : MonoBehaviour
     public LayerMask detectionLayer;
     public GameObject detectedObject;
     public List<GameObject> pickedItems = new List<GameObject>();
+    public GameObject interaction;
 
 
     void checkObject()
@@ -39,11 +40,13 @@ public class Pickup : MonoBehaviour
         if (obj == null)
         {
             detectedObject = null;
+            interaction.SetActive(false);
             return false;
         }
         else
         {
             detectedObject = obj.gameObject;
+            interaction.SetActive(true);
             return true;
         }
     }

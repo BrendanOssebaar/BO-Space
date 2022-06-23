@@ -9,7 +9,7 @@ public class teleport : MonoBehaviour
     public GameObject endB;
     
      private void OnTriggerEnter2D(Collider2D collision)
-    {
+     {
         if (gameObject.tag == "endsideA")
         {
             player.transform.position = new Vector2(endB.gameObject.transform.position.x + 0.7f, player.gameObject.transform.position.y);
@@ -21,6 +21,6 @@ public class teleport : MonoBehaviour
             player.transform.position = new Vector2(endA.gameObject.transform.position.x + -0.7f, player.gameObject.transform.position.y);
             Debug.Log("teleportB");
         }
-    }
+     }
       
 }    

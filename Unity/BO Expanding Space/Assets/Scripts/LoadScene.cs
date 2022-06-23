@@ -8,6 +8,8 @@ public class LoadScene : MonoBehaviour
     public GameObject player;
     public GameObject overlay;
     public GameObject overlay2;
+    public GameObject video;
+
 
     int current;
     public void quit(string sceneName)
@@ -28,6 +30,7 @@ public class LoadScene : MonoBehaviour
         player.GetComponent<Player>().enabled = true;
         overlay.SetActive(false);
         overlay2.SetActive(true);
+        video.SetActive(true);
 
     }
     public void FromMainToDesert()

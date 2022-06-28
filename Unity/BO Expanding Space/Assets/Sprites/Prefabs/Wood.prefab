@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: -699782051196235393}
   - component: {fileID: 342313506633318001}
   - component: {fileID: 7425197606068626055}
-  - component: {fileID: 387679213818008394}
+  - component: {fileID: 8586615037836599055}
   m_Layer: 6
   m_Name: Wood
   m_TagString: Untagged
@@ -29,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 2922535817566105619}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -1.3286, y: -6.1772, z: 0}
-  m_LocalScale: {x: 0.3, y: 0.4, z: 1}
+  m_LocalScale: {x: 0.4, y: 0.4, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -115,7 +115,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 0
   amount: 0
---- !u!60 &387679213818008394
+--- !u!60 &8586615037836599055
 PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -128,7 +128,7 @@ PolygonCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: 0.1}
   m_SpriteTilingProperty:
     border: {x: 6.83, y: 4.02, z: 8.09, w: 3.8999999}
     pivot: {x: 0.4613899, y: 0.48284003}
@@ -140,20 +140,16 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 0.66999996, y: -0.38}
-      - {x: 0.66999996, y: 0.69}
-      - {x: 0.56, y: 0.78999996}
-      - {x: 0.14999999, y: 0.91999996}
-      - {x: -0.45, y: 0.91999996}
-      - {x: -0.57, y: 0.89}
-      - {x: -0.71, y: 0.83}
-      - {x: -0.77, y: 0.78999996}
-      - {x: -0.87, y: 0.65}
-      - {x: -0.87, y: -0.35}
-      - {x: -0.83, y: -0.42}
-      - {x: -0.71, y: -0.48999998}
-      - {x: -0.55, y: -0.52}
-      - {x: 0.35, y: -0.52}
-      - {x: 0.37, y: -0.5}
-      - {x: 0.51, y: -0.48}
-      - {x: 0.61, y: -0.42999998}
+    - - {x: 0.26776183, y: 0.6344397}
+      - {x: 0.117761835, y: 0.74443966}
+      - {x: -0.17223816, y: 0.74443966}
+      - {x: -0.22223815, y: 0.7244397}
+      - {x: -0.30223817, y: 0.6544397}
+      - {x: -0.36223814, y: 0.5244397}
+      - {x: -0.36223814, y: -0.2555603}
+      - {x: -0.32223815, y: -0.3255603}
+      - {x: -0.24223815, y: -0.3855603}
+      - {x: 0.19776183, y: -0.3855603}
+      - {x: 0.29776183, y: -0.3255603}
+      - {x: 0.32776183, y: -0.2755603}
+      - {x: 0.32776183, y: 0.5344397}

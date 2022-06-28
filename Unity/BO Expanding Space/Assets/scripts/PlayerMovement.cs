@@ -27,7 +27,7 @@ public class PlayerMovement : MonoBehaviour
         {
             transform.position += new Vector3(movementSpeed, 0) * Time.deltaTime;
         }
-        if ((onGround == true) && (Input.GetKeyDown(KeyCode.W)))
+        if ((onGround == true) && (Input.GetKeyDown(KeyCode.Space)))
             {
                 Vector2 jump = new Vector2(0, jumpHeight);
                 player.velocity = new Vector2(player.velocity.x, 0);

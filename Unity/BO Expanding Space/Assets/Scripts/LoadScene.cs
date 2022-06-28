@@ -2,13 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.Video;
 
 public class LoadScene : MonoBehaviour
 {
     public GameObject player;
     public GameObject overlay;
     public GameObject overlay2;
-    public GameObject video;
+    public VideoPlayer video;
 
 
     int current;
@@ -30,7 +31,7 @@ public class LoadScene : MonoBehaviour
         player.GetComponent<Player>().enabled = true;
         overlay.SetActive(false);
         overlay2.SetActive(true);
-        video.SetActive(true);
+        video.Play();
 
     }
     public void FromMainToDesert()

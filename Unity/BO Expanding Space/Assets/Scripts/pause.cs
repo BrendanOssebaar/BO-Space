@@ -1,13 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Video;
 
 public class pause : MonoBehaviour
 {
     public GameObject player;
     public GameObject overlay;
     public GameObject overlay2;
-    public GameObject video;
+    public VideoPlayer vid;
 
     void Start()
     {
@@ -15,7 +16,7 @@ public class pause : MonoBehaviour
         player.SetActive(true);
         overlay.SetActive(false);
         overlay2.SetActive(true);
-        video.SetActive(true);
+        vid.Play();
 
     }
 
@@ -28,7 +29,7 @@ public class pause : MonoBehaviour
             player.GetComponent<Player>().enabled = false;
             overlay.SetActive(true);
             overlay2.SetActive(false);
-            video.SetActive(false);
+            vid.Pause();
         }
     }
 }

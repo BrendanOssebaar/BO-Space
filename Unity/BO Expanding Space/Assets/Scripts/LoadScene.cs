@@ -44,7 +44,7 @@ public class LoadScene : MonoBehaviour
     }
     public void FromRuinedToLush()
     {
-        SceneManager.LoadScene(5);
+        SceneManager.LoadScene(6);
     }
     
 }

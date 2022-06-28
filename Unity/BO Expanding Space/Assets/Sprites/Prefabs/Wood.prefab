@@ -49,7 +49,7 @@ MonoBehaviour:
   layermask:
     serializedVersion: 2
     m_Bits: 512
-  offset1: 10
+  offset1: 10000
 --- !u!212 &342313506633318001
 SpriteRenderer:
   m_ObjectHideFlags: 0

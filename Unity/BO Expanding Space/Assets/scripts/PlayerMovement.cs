@@ -10,6 +10,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField]
     private float jumpHeight = 27;
     private bool onGround;
+    
 
     void Awake()
     {
@@ -22,12 +23,12 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetKey(KeyCode.A))
         {
             transform.position += new Vector3(-movementSpeed, 0) * Time.deltaTime;
-
+            transform.rotation = Quaternion.Euler(0, 180, 0);
         }
         if (Input.GetKey(KeyCode.D))
         {
             transform.position += new Vector3(movementSpeed, 0) * Time.deltaTime;
-
+            transform.rotation = Quaternion.Euler(0, 0, 0);
         }
         if ((onGround == true) && (Input.GetKeyDown(KeyCode.Space)))
             {

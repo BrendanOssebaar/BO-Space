@@ -16,7 +16,7 @@ public class pause : MonoBehaviour
         player.SetActive(true);
         overlay.SetActive(false);
         overlay2.SetActive(true);
-        vid.Play();
+        
 
     }
 

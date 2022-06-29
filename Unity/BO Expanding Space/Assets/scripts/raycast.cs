@@ -11,7 +11,7 @@ public class raycast : MonoBehaviour
     void Start()
     {
         RaycastHit2D hitinfo = Physics2D.Raycast(origin: transform.position, -Vector2.up, Mathf.Infinity, layermask);
-        Debug.DrawRay(transform.position, -Vector2.up, Color.red, 2);
+        // Debug.DrawRay(transform.position, -Vector2.up, Color.red, 2);
         transform.position = hitinfo.point;
     }
 }

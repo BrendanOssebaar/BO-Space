@@ -21,16 +21,19 @@ public class PlanetStats : MonoBehaviour
                 maxFuel = 0;
                 return maxFuel;
             case planetType.Desert:
-                Debug.Log("Desert");
+                // Debug.Log("Desert");
                 maxFuel = 500;
+
                 return maxFuel;
             case planetType.Ruined:
-                Debug.Log("Ruined");
+                // Debug.Log("Ruined");
                 maxFuel = 1500;
+
                 return maxFuel;
             case planetType.Lush:
-                Debug.Log("Lush");
+                // Debug.Log("Lush");
                 maxFuel = 3000;
+
                 return maxFuel;
         }
     }

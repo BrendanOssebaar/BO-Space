@@ -22,10 +22,12 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetKey(KeyCode.A))
         {
             transform.position += new Vector3(-movementSpeed, 0) * Time.deltaTime;
+
         }
         if (Input.GetKey(KeyCode.D))
         {
             transform.position += new Vector3(movementSpeed, 0) * Time.deltaTime;
+
         }
         if ((onGround == true) && (Input.GetKeyDown(KeyCode.Space)))
             {
@@ -33,6 +35,7 @@ public class PlayerMovement : MonoBehaviour
                 player.velocity = new Vector2(player.velocity.x, 0);
                 player.AddForce(jump, ForceMode2D.Impulse);
                 onGround = false;
+
         }
     }
    

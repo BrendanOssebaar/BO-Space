@@ -34,7 +34,7 @@ public class leave_planet : MonoBehaviour
     {
         if (full == true)
         {
-            Debug.Log("end_leave");
+            // Debug.Log("end_leave");
             SceneManager.LoadScene(scene);
         }
     }

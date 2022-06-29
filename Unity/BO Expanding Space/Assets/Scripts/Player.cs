@@ -8,7 +8,7 @@ public class Player : MonoBehaviour
 {
     [SerializeField] public UI_Inventory uiInventory;
     float currentTime;
-    float startingTime = 500f;
+    float startingTime = 300f;
     public int maxFuel;
     public int currentFuel;
     public Fuelbar fuelbar; 

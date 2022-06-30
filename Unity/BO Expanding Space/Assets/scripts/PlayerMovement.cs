@@ -9,6 +9,7 @@ public class PlayerMovement : MonoBehaviour
     private Rigidbody2D player;
     [SerializeField]
     private float jumpHeight = 27;
+    [SerializeField]
     private bool onGround;
     private AudioSource walkSource;
     //private AudioSource jumpsource;
@@ -16,7 +17,8 @@ public class PlayerMovement : MonoBehaviour
     private AudioClip footsteps;
     /*[SerializeField]
     private AudioClip jump;*/
-
+    [SerializeField]
+    private Animator animator;
     void Awake()
     {
         player = GetComponent<Rigidbody2D>();
@@ -28,6 +30,7 @@ public class PlayerMovement : MonoBehaviour
         //jumpsource = GetComponent<AudioSource>();
         walkSource.Stop();
         //jumpsource.Stop();
+        animator.SetFloat("Speed", 0);
     }
 
     void Movement()
@@ -37,17 +40,20 @@ public class PlayerMovement : MonoBehaviour
             transform.position += new Vector3(-movementSpeed, 0) * Time.deltaTime;
             transform.rotation = Quaternion.Euler(0, 180, 0);
             soundsteps();
+            animator.SetFloat("Speed", 2);
         }
         else if (Input.GetKey(KeyCode.D))
         {
             transform.position += new Vector3(movementSpeed, 0) * Time.deltaTime;
             transform.rotation = Quaternion.Euler(0, 0, 0);
             soundsteps();
+            animator.SetFloat("Speed", 2);
         }
         else
         {
             walkSource.Stop();
             //jumpsource.Stop();
+            animator.SetFloat("Speed", 0);
         }
         if ((onGround == true) && (Input.GetKeyDown(KeyCode.Space)))
             {
@@ -55,6 +61,8 @@ public class PlayerMovement : MonoBehaviour
                 player.velocity = new Vector2(player.velocity.x, 0);
                 player.AddForce(jump, ForceMode2D.Impulse);
                 onGround = false;
+            animator.SetBool("NotGrounded", true);
+            animator.SetTrigger("Jump");
             //soundjump();
         }
         
@@ -101,9 +109,13 @@ public class PlayerMovement : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         onGround = true;
+        animator.SetBool("NotGrounded", false);
+        animator.ResetTrigger("Jump");
+        animator.SetBool("StopLanding", true);
     }
     private void OnCollisionExit2D(Collision2D collision)
     {
         onGround = false;
+        animator.SetBool("NotGrounded", true);
     }
 }

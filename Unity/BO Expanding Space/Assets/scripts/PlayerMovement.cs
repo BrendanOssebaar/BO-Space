@@ -10,9 +10,12 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField]
     private float jumpHeight = 27;
     private bool onGround;
-    private AudioSource audioSource;
+    private AudioSource walkSource;
+    //private AudioSource jumpsource;
     [SerializeField]
     private AudioClip footsteps;
+    /*[SerializeField]
+    private AudioClip jump;*/
 
     void Awake()
     {
@@ -21,8 +24,10 @@ public class PlayerMovement : MonoBehaviour
     }
     private void Start()
     {
-        audioSource = GetComponent<AudioSource>();
-        audioSource.Stop();
+        walkSource = GetComponent<AudioSource>();
+        //jumpsource = GetComponent<AudioSource>();
+        walkSource.Stop();
+        //jumpsource.Stop();
     }
 
     void Movement()
@@ -31,16 +36,18 @@ public class PlayerMovement : MonoBehaviour
         {
             transform.position += new Vector3(-movementSpeed, 0) * Time.deltaTime;
             transform.rotation = Quaternion.Euler(0, 180, 0);
-            sound();
-        }  else if (Input.GetKey(KeyCode.D))
+            soundsteps();
+        }
+        else if (Input.GetKey(KeyCode.D))
         {
             transform.position += new Vector3(movementSpeed, 0) * Time.deltaTime;
             transform.rotation = Quaternion.Euler(0, 0, 0);
-            sound();
+            soundsteps();
         }
         else
         {
-            audioSource.Stop();
+            walkSource.Stop();
+            //jumpsource.Stop();
         }
         if ((onGround == true) && (Input.GetKeyDown(KeyCode.Space)))
             {
@@ -48,22 +55,48 @@ public class PlayerMovement : MonoBehaviour
                 player.velocity = new Vector2(player.velocity.x, 0);
                 player.AddForce(jump, ForceMode2D.Impulse);
                 onGround = false;
-
+            //soundjump();
         }
         
+        
     }
-    public void sound()
+    /*void makesounds()
     {
-        if(audioSource.isPlaying == false)
+        if (Input.GetKey(KeyCode.A) && onGround == true)
         {
-            audioSource.Play();
+            soundsteps();
+        }
+        if (Input.GetKey(KeyCode.D) && onGround == true)
+        {
+            soundsteps();
+        }
+        else
+        {
+            walkSource.Stop();
+            //jumpsource.Stop();
+        }
+    }*/
+    public void soundsteps()
+    {
+        if(walkSource.isPlaying == false)
+        {
+            walkSource.Play();
         }
         
     }
-   
+    /*public void soundjump()
+    {
+        if (jumpsource.isPlaying == false)
+        {
+            jumpsource.Play();
+        }
+
+    }*/
+
     void Update()
     {
         Movement();
+        //makesounds();
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {

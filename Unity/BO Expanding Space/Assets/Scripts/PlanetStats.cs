@@ -13,6 +13,9 @@ public class PlanetStats : MonoBehaviour
     public int maxFuel;
     public int currentFuel;
     public Fuelbar fuelbar;
+    private AudioSource Background;
+    [SerializeField]
+    private AudioClip background;
     public int Planets()
     {
         switch(PlanetType)
@@ -42,6 +45,8 @@ public class PlanetStats : MonoBehaviour
         Planets();
         fuelbar.setMaxFuel(maxFuel);
         currentFuel = 0;
+        Background = GetComponent<AudioSource>();
+        Background.Play();
         
     }
 

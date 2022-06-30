@@ -11,7 +11,8 @@ public class Player : MonoBehaviour
     float startingTime = 300f;
     public int maxFuel;
     public int currentFuel;
-    public Fuelbar fuelbar; 
+    public Fuelbar fuelbar;
+    
 
     private Inventory inventory;
     void Start()

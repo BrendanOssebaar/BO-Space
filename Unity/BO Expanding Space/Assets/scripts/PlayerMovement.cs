@@ -10,12 +10,19 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField]
     private float jumpHeight = 27;
     private bool onGround;
-    
+    private AudioSource audioSource;
+    [SerializeField]
+    private AudioClip footsteps;
 
     void Awake()
     {
         player = GetComponent<Rigidbody2D>();
 
+    }
+    private void Start()
+    {
+        audioSource = GetComponent<AudioSource>();
+        audioSource.Stop();
     }
 
     void Movement()
@@ -24,11 +31,16 @@ public class PlayerMovement : MonoBehaviour
         {
             transform.position += new Vector3(-movementSpeed, 0) * Time.deltaTime;
             transform.rotation = Quaternion.Euler(0, 180, 0);
-        }
-        if (Input.GetKey(KeyCode.D))
+            sound();
+        }  else if (Input.GetKey(KeyCode.D))
         {
             transform.position += new Vector3(movementSpeed, 0) * Time.deltaTime;
             transform.rotation = Quaternion.Euler(0, 0, 0);
+            sound();
+        }
+        else
+        {
+            audioSource.Stop();
         }
         if ((onGround == true) && (Input.GetKeyDown(KeyCode.Space)))
             {
@@ -38,6 +50,15 @@ public class PlayerMovement : MonoBehaviour
                 onGround = false;
 
         }
+        
+    }
+    public void sound()
+    {
+        if(audioSource.isPlaying == false)
+        {
+            audioSource.Play();
+        }
+        
     }
    
     void Update()
